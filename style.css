@@ -1,0 +1,137 @@
+body,
+html {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   background-color: rgba(143, 84, 84, 0.973);
+}
+*,
+*:after,
+*:before {
+   margin: 0;
+   padding: 0;
+}
+
+h1,
+h2 {
+   margin: 0;
+   padding: 0;
+}
+section {
+}
+
+._loading-icon {
+   background-image: url("loading.gif");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100px;
+}
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+}
+.container {
+   width: 1100px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.text {
+   background-color: brown;
+   padding: 50px 10px;
+}
+.text h1,
+h2 {
+   margin-bottom: 20px;
+}
+.img {
+   padding: 50px 10px;
+   background-color: cadetblue;
+}
+.img h2 {
+   margin-bottom: 20px;
+}
+.img-container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+   gap: 20px;
+}
+.img-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+.img-item {
+   background-image: url("loading.gif");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100px;
+   position: relative;
+   display: grid;
+   grid-template-rows: minmax(100px, 200px) 1fr;
+   /* padding: 0 0 100% 0; */
+}
+.img-item img {
+   /* position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; */
+}
+
+.map {
+   background-color: chocolate;
+   padding: 50px 10px;
+}
+.map-container {
+   /* display: grid;
+   grid-template-columns: repeat(2, 1fr);
+
+   column-gap: 20px; */
+}
+.bg-map {
+   background-image: url("loading.gif");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100px;
+}
+
+.img-item {
+}
+.img-content {
+   background-color: burlywood;
+   padding: 20px;
+   display: grid;
+   grid-template-rows: 1fr auto;
+   justify-items: left;
+}
+.img-content h5,
+p,
+span {
+   margin-bottom: 10px;
+}
+.img-content-link {
+   margin-bottom: 10px;
+   display: inline-block;
+   text-decoration: none;
+   color: rgb(107, 68, 41);
+   padding: 10px;
+   background-color: cornflowerblue;
+}
+.img-content span {
+   display: block;
+}
+.img-read-more {
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   padding: 10px;
+   background-color: rgb(163, 51, 57);
+}
+
+._loading-icon {
+   background: url("loading.gif") center/50px no-repeat;
+   height: 50px;
+}
