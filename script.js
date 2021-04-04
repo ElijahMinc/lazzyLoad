@@ -11,7 +11,6 @@ if (lazyImages.length > 0) {
    lazyImages.forEach(img => {
       if (img.dataset.src) {
          lazeImagesPositions.push(img.getBoundingClientRect().top + pageYOffset)
-         lazeScrollCheck()
       }
    })
 }
@@ -32,8 +31,10 @@ function lazyScroll() {
 function lazeScrollCheck() {
    let imgIndex = lazeImagesPositions.findIndex(positionImg => { // поиск индекса по элементу
       return pageYOffset > positionImg - windowHeight // если мы проскролили больше, чем позиция элемента - высота окна браузера
+        // мы возвращаем индекс элемента тогда, когда проксролили больше,
+      // чем значение элемент минус высота окна браузера
    })
-   if (imgIndex >= 0) {
+   if (imgIndex >= 0) {// мы получаем КАЖДЫЙ элемент массива благодаря тому, что удаляем в конце ячейку
       if (lazyImages[imgIndex].dataset.src) { // если массив наших картинок с найденным индексом имеет дата-атрибут, то
          lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src; // мы присваем к атрибуту src то значение, которое было в дата-атрибуте
          lazyImages[imgIndex].removeAttribute('data-src'); // удаляем дата-атрибут 
